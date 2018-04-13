@@ -7,6 +7,17 @@
     <title>Learning How JS and HTML Work Together</title>
 </head>
 <body>
-    <h1>On a New Branch</h1>
+    <h1>Run Some Code</h1>
+    <button onclick="getSquare()">Get Square</button>
+
+    <script> 
+        function getSquare() {
+            var x= +prompt('a number?');
+            var square = x * x;
+            console.log('square of', x, 'is', square);
+        }
+
+       // getSquare();
+    </script>
 </body>
 </html>
