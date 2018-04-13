@@ -6,30 +6,90 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Learning How JS and HTML Work Together</title>
     <style>
+    h1 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: #C24184;
+        padding: 2% 4%;
+        text-align: center;
+    }
+    h2 {
+        display: inline;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 2em;
+        color: #5FA7DD;
+    }
+    p {
+        font-family: Arial, Helvetica, sans-serif; 
+        color: #343437;
+        display: inline;
+    }
+    #rdo{
+        padding: 2% 4%; 
+    }
+    #input-number {
+        margin: 2% 4%;
+    }
+    #btn {
+  background: #5FA7DD;
+  background-image: -webkit-linear-gradient(top, #5FA7DD, #C24184);
+  background-image: -moz-linear-gradient(top, #5FA7DD, #C24184);
+  background-image: -ms-linear-gradient(top, #5FA7DD, #C24184);
+  background-image: -o-linear-gradient(top, #5FA7DD, #C24184);
+  background-image: linear-gradient(to bottom, #5FA7DD, #C24184);
+  -webkit-border-radius: 4;
+  -moz-border-radius: 4;
+  border-radius: 4px;
+  font-family: Arial;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  display: block;
+  margin-left: 40%;
+}
+
+#btn:hover {
+  background: #C24184;
+  text-decoration: none;
+}
     #result {
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 6em;
-        color: rgb(233, 128, 228);
-        padding: 10%;    
+        font-size: 3em;
+        color: #343437;
+        padding: 6%;    
     }
 
     .done {
-        background-color: #333;
+        background-color: #F5E76A;
         border: black, 2px; 
     }
     
     </style>
 </head>
 <body>
-    <h1>Run Some Code</h1>
-    <div>
+        <h1>Let's Run Some Code</h1>
+        <hr>
+        <h2>1.</h2>
+        <p>
+            Select which solution you want to calculate:
+        </p>
+    <div id="rdo">
         square: <input name="power" checked type="radio" value="2">
-        cube: <input name="power" type="radio" value="3">    
+        cube: <input name="power" type="radio" value="3"> 
+    </div>   
+    <div>
+        <h2>2.</h2>
+        <p>
+            Enter a numerical value:
+        </p>
+    <div>
+        <input id="input-number" type="number">
+        <hr>
+        <button id="btn" onclick="getSquare()">Calculate</button>
     </div>
-    <input id="input-number" type="number">
-    <button onclick="getSquare()">Get Value</button>
-    <br>
-    <br>
+        <br>
+        <br>
+    </div>
     <div id="result">
 
     </div>
@@ -48,7 +108,7 @@
             //calculate the answer:
             var answer = Math.pow(x, exponent);
             //get the result Div:
-            var result= document.getElementById('result');
+            var result = document.getElementById('result');
 
             //write the response to display in the div
             result.innerHTML = x + ' to the ' + exponent
