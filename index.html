@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Learning How JS and HTML Work Together</title>
+    <style>
+    #result {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 6em;
+        color: rgb(233, 128, 228);
+        padding: 10%;    
+    }
+
+    .done {
+        background-color: #333;
+        border: black, 2px; 
+    }
+    
+    </style>
 </head>
 <body>
     <h1>Run Some Code</h1>
@@ -14,7 +28,11 @@
     </div>
     <input id="input-number" type="number">
     <button onclick="getSquare()">Get Value</button>
+    <br>
+    <br>
+    <div id="result">
 
+    </div>
     <script> 
         function getSquare() {
             // find the input with id "input-number":
@@ -29,7 +47,14 @@
 
             //calculate the answer:
             var answer = Math.pow(x, exponent);
-            
+            //get the result Div:
+            var result= document.getElementById('result');
+
+            //write the response to display in the div
+            result.innerHTML = x + ' to the ' + exponent
+                + ' is ' + answer;
+            result.classList.add('done');    
+
             // log the answer to the console
             console.log(x, 'to the', exponent, 'is', answer);
         }
