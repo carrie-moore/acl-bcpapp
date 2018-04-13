@@ -1,0 +1,1 @@
+Learning to link up JS to HTML page
